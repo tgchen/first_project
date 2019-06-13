@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>First App</title>
+    <link rel="stylesheet" href="{% static "css/mystyle.css" %}">
+  </head>
+  <body>
+    <h1>Hello this is Me. Eric</h1>
+    {{ index_page }}
+
+    <img src="{% static "images/1.jpg" %}" alt="Oh OH!, Didn't show">
+  </body>
+</html>
