@@ -7,8 +7,26 @@
     <link rel="stylesheet" href="{% static "css/mystyle.css" %}">
   </head>
   <body>
-    <h1>Hello this is Me. Eric</h1>
-    {{ index_page }}
+    <h1>Welcome to Django First App level two</h1>
+    <h2>Here are your access records:</h2>
+    <div class="djangotwo">
+      {% if access_records%}
+        <table>
+          <thead>
+            <th>Site Name</th>
+            <th>Date Access</th>
+          </thead>
+          {% for acc in access_records %}
+            <tr>
+              <td>{{ acc.name }}</td>
+              <td>{{ acc.date }}</td>
+            </tr>
+          {% endfor %}
+        </table>
+      {% else %}
+        <p>No access record found</p>
+      {% endif %}
+    </div>
 
     <img src="{% static "images/1.jpg" %}" alt="Oh OH!, Didn't show">
   </body>
